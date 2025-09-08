@@ -1,0 +1,32 @@
+{
+  "type": "module",
+  "name": "angelas-food-adventures-server",
+  "version": "1.0.0",
+  "description": "Node.js HTTP Web server for Angelas food aventures app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiaHuebscher/secret-app-server.git"
+  },
+  "keywords": [
+    "Node",
+    "REST",
+    "Server",
+    "HTTP"
+  ],
+  "author": "Mia Huebscher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiaHuebscher/secret-app-server/issues"
+  },
+  "homepage": "https://github.com/MiaHuebscher/secret-app-server#readme",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
