@@ -8,25 +8,23 @@ const userSchema = new mongoose.Schema({
       type: String,
       required: true,
       validate: {
-        // Custom validator for (firstName, lastName) pair
         validator: async function (value) {
-          // Only run the check if the name pair is "Angela Todd"
           if (this.firstName === "Angela" && value === "Todd") {
             const existing = await mongoose.models.User.findOne({
               firstName: "Angela",
               lastName: "Todd",
-              _id: { $ne: this._id }, // exclude current doc on updates
+              _id: { $ne: this._id },
             });
-            return !existing; // valid only if no existing match
+            return !existing;
           }
-          return true; // for all other names, allow
+          return true;
         },
         message: "A user with the name Angela Todd already exists.",
       },
     },
     access: {
       type: String,
-      enum: ["READ-ONLY", "READ-WRITE"],
+      enum: ["READ-ONLY", "READ-WRITE", "READ-WRITE-DELETE"],
       default: "READ-ONLY",
     },
     numRestsAdded: Number,
