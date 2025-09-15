@@ -6,5 +6,12 @@ export default function DataRoutes(app) {
     res.json(data)
   };
 
+  const updateData = async (req, res) => { 
+    const { dataId } = req.params;
+    const status = await dao.updateData(dataId, req.body);
+    res.json(status);
+  };
+
   app.get("/api/data", getData);
+  app.put("/api/data/:dataId", updateData);
 };

@@ -1,6 +1,6 @@
 import * as dao from "./dao.js";
 
-export default function UserRoutes(app) {
+export default function RestaurantRoutes(app) {
   const createRestaurant = async (req, res) => {
     const restaurant = await dao.createRestaurant(req.body);
     res.json(restaurant);

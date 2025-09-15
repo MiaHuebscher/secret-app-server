@@ -3,6 +3,8 @@ import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
 import UserRoutes from './Users/routes.js';
+import DataRoutes from "./Data/routes.js";
+import RestaurantRoutes from "./Restaurants/routes.js";
 import session from "express-session";
 
 // Connect to the Mongo database
@@ -33,4 +35,6 @@ app.use(express.json());
 app.get('/', (req, res) => {res.send("Welcome to the Server for Angela's Food Adventures App!! \
     Also...You Shouldn't Be Here, Please Leave.")});
 UserRoutes(app);
+DataRoutes(app);
+RestaurantRoutes(app);
 app.listen(process.env.PORT || 4000);
