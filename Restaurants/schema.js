@@ -4,7 +4,7 @@ const restaurantsSchema = new mongoose.Schema({
     restaurantName: { type: String, required: true},
     cuisine: { type: String, required: true },
     coords: { type: Array, required: true },
-    address: { type: Array, required: true },
+    address: { type: String, required: true },
     city: { type: String, required: true },
     state: { type: String, required: true },
     country: { type: String, required: true },
@@ -12,7 +12,8 @@ const restaurantsSchema = new mongoose.Schema({
     addedBy: { type: String, required: true },
     webLink: String,
     angelasRating: String,
-    recommendedDishes: String
+    recommendedDishes: String,
+    note: String
   },
   { collection: "restaurants" }
 );
