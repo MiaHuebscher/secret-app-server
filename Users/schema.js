@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
     },
     access: {
       type: String,
-      enum: ["READ-ONLY", "READ-WRITE", "READ-WRITE-DELETE"],
+      enum: ["READ-ONLY", "READ-WRITE", "READ-WRITE-DELETE", "FULL POWER"],
       default: "READ-ONLY",
     },
     numRestsAdded: Number,
